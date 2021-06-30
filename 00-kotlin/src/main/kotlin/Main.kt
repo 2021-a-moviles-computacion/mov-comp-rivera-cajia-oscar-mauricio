@@ -1,3 +1,4 @@
+import jdk.nashorn.internal.objects.NativeArray.reduce
 import java.util.*
 
 fun main(){
@@ -125,6 +126,50 @@ fun main(){
     val respuestaGilterDos = arrDinamico.filter { it <= 5 }
     println(respuestaGilter)
     println(respuestaGilterDos)
+
+    val respuestaAny: Boolean = arrDinamico.any { valorActual:Int -> return@any (valorActual > 5) }
+    println(respuestaAny)
+    val respuestaAll: Boolean = arrDinamico.all { valorActual:Int -> return@all (valorActual > 5) }
+    println(respuestaAll)
+
+
+    //operador REDUCE
+    //1. devuelve lo que acumula
+    //en que valor empieza -> 0
+    //el ope
+
+    val respuestaReduce: Int =
+        arrDinamico.reduce { acumulado:Int, valorActual:Int -> return@reduce (acumulado + valorActual) }
+    println(respuestaReduce)
+
+    val arregloDanio = arrayListOf<Int>(12,15, 8, 10)
+    val respuestaReduceFold: Int =
+        arregloDanio.fold(100, {acumulado, valorActualIteracion -> return@fold acumulado - valorActualIteracion})
+    println(respuestaReduceFold)
+
+    val vidaActual: Double = arrDinamico
+        .map { it * 2.3 }
+        .filter { it > 20 }
+        .fold(100.00, {acc, i -> acc - i})
+        .also { println(it) }
+    println("Valor vida actual ${vidaActual}")
+
+    val ejemploUno = Suma(1, 2)
+    // val ejemploUno = Suma(1,2)
+    val ejemploDos = Suma(null, 2)
+    // val ejemploDos = Suma(null,2)
+    val ejemploTres = Suma(1, null)
+    // val ejemploTres = Suma(1,null)
+    val ejemploCuatro = Suma(null, null)
+    // val ejemploCuatro = Suma(null,null)
+    println(ejemploUno.sumar())
+    println(ejemploDos.sumar())
+    println(ejemploTres.sumar())
+    println(ejemploCuatro.sumar())
+    //    Suma.historialSumas
+    //    Suma.agregarHistorial(1)
+
+
 }
 
 //FUNCIONES
@@ -138,8 +183,105 @@ fun calcularSueldo(sueldo: Double, tasa: Double = 12.00, bonoEspecial: Double? =
     }else{
         return sueldo * (100 / tasa) + bonoEspecial
     }
+
+
 }
 
+
+
+//CLASES, BABE.
+
+abstract class NumerosJava {
+    protected val numeroUno: Int // Propiedad clase
+    private val numeroDos: Int // Propiedad clase
+
+    constructor(
+        uno: Int,   // Parametros requeridos
+        dos: Int,   // Parametros requeridos
+    ) {
+//        this.numeroUno = uno
+//        this.numeroDos = dos
+        numeroUno = uno
+        numeroDos = dos
+        println("Inicializar")
+    }
+
+}
+
+abstract class Numeros(
+    // Constructor Primario
+    //modificadores de acceso
+    protected var numeroUno: Int, // Propiedad clase
+    protected var numeroDos: Int,  // Propiedad clase
+) {
+    init { // Bloque inicio del constructor primario
+        println("Inicializar")
+    }
+}
+// instancia.numeroUno
+// instancia.numeroDos
+
+class Suma(
+    // Constructor primario
+    uno: Int, // Parametro requerido
+    dos: Int, // Parametro requerido
+) : Numeros( // Constructor "papa" (super)
+    uno,
+    dos
+) {
+    init {
+        this.numeroUno
+        this.numeroDos
+        // X -> this.uno -> NO EXISTEN
+        // X -> this.dos -> NO EXISTEN
+    }
+
+    constructor( //  Segundo constructor
+        uno: Int?, // parametros
+        dos: Int // parametros
+    ) : this( // llamada constructor primario
+        if (uno == null) 0 else uno,
+        dos
+    )
+
+    constructor( //  Tercer constructor
+        uno: Int, // parametros
+        dos: Int? // parametros
+    ) : this(
+        // llamada constructor primario
+        uno,
+        if (dos == null) 0 else dos,
+    )
+
+    constructor( //  Cuarto constructor
+        uno: Int?, // parametros
+        dos: Int? // parametros
+    ) : this(
+        // llamada constructor primario
+        if (uno == null) 0 else uno,
+        if (dos == null) 0 else dos,
+    )
+
+    //FUNCION DENTRO DE UNA CLASE.PARAMETROS REQUERIDOS, POR DEFECTOS O NULOS
+    //TODAS LAS FUNCIONES POR DEFECTO SON PUBLICOS
+    // public fun sumar(): Int {
+    fun sumar(): Int {
+        // val total: Int = this.numeroUno + this.numeroDos
+        val total: Int = numeroUno + numeroDos
+        agregarHistorial(total)
+        return total
+    }
+    // SINGLETON
+    companion object {
+        val historialSumas = arrayListOf<Int>()
+        fun agregarHistorial(valorNuevaSuma:Int){
+            // this.historialSumas.add(valorNuevaSuma)
+            historialSumas.add(valorNuevaSuma)
+            println(historialSumas)
+        }
+    }
+
+}
 
 
 
