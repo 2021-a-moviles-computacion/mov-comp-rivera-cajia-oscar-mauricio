@@ -1,0 +1,6 @@
+1, Ferrari, Privado, Milán, 1947-09-13, Enzo Ferrari
+2, Volkswagen, Privado, Berlin, 1937-12-12, Frente Aleman
+3, Gato, Privado, Quito, 1998-09-13, Rissoto
+4, Mitsubishi Motors, Privado, Tokyo, 1970-09-13, M Heavy
+5, Mitsubishi Motors, Privado, Tokyo, 1970-09-13, M Heavy
+6, Mitsubishi Motors, Privado, Tokyo, 1970-09-13, M Heavy
