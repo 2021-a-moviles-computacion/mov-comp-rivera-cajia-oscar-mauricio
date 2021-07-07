@@ -55,7 +55,7 @@ fun main(){
     //if de una linea
     val coqueteo = if (estadoCivilWhen=="S") "SI" else "NO"
 
-    imprimirNombre("Adrian")
+    imprimirNombre("NOMBREEEEEEEEEEEEEEEEEEEEeee")
 
     calcularSueldo(100.00)
     calcularSueldo(100.00, 14.00)

@@ -1,0 +1,6 @@
+2, FerrariAA, 45.0, 4, 7.8, A, 1
+3, FerrariBB, 66666.0, 7, 7.8, A, 1
+4, modeloUpdate, 40000.0, 7, 7.8, A, 3
+6, ModeloNuevo, 800.0, 2, 5.5, R, 6
+7, ModeloActualizado, 90.0, 2, 4.7, B, 2
+9, ModeloVolks, 50000.0, 4, 7.9, V, 2
