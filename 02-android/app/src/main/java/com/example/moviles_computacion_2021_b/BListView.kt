@@ -1,5 +1,6 @@
 package com.example.moviles_computacion_2021_b
 
+import android.content.DialogInterface
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import androidx.appcompat.app.AlertDialog
 
 class BListView : AppCompatActivity() {
 
@@ -45,21 +47,59 @@ class BListView : AppCompatActivity() {
         val botonAddNumber = findViewById<Button>(R.id.btn_add_num)
         botonAddNumber.setOnClickListener {
             addItemsToViewList(
-                BEntrenador("Prueba", "d@d.com"),
+                BEntrenador("Prueba", "d@d.com", null),
                 arregloNumeros,
                 adaptador
             )
         }
 
         //aber los elementos del listview
-        /*listViewEjemplo
-            .setOnClickListener { adapterView, view, posicion, id ->
+        listViewEjemplo
+            .setOnItemLongClickListener { adapterView, view, posicion, id ->
                 Log.i("list-view", "Has dado click en ${posicion}")
-                return @setOnItem true
-            }*/
-        registerForContextMenu(listViewEjemplo)
 
+                val builder = AlertDialog.Builder(this) //constructor de alerta
+
+                builder.setTitle("Titulo")
+                //builder.setMessage("Mensaje")
+
+                val seleccionUsuario = booleanArrayOf(
+                    true,
+                    false,
+                    false
+                )
+
+                val opciones = resources.getStringArray(R.array.string_array_opciones_dialogo)
+
+                builder.setMultiChoiceItems(
+                    opciones,
+                    seleccionUsuario,
+                    { dialog, which, isChecked ->
+                        Log.i("list-view", "${which} ${isChecked}")
+                    }
+                )
+
+                builder.setPositiveButton(
+                    "Si",
+                    DialogInterface.OnClickListener { dialog, which ->
+                        Log.i("list-view", "Si")
+                    }
+                )
+
+                builder.setNegativeButton(
+                    "No",
+                    null
+                )
+
+                val dialogo = builder.create()//creamos el dialogo y lo mostramos
+                dialogo.show()
+
+                return@setOnItemLongClickListener true
+            }
+        //registerForContextMenu(listViewEjemplo)
     }
+
+
 
     override fun onCreateContextMenu(
         menu: ContextMenu?,

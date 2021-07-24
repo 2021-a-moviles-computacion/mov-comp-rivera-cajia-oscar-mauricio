@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_crearUser"
+        android:layout_width="124dp"
+        android:layout_height="47dp"
+        android:text="crear"
+        app:layout_constraintEnd_toEndOf="@+id/btn_actualizaUser"
+        app:layout_constraintStart_toStartOf="@+id/btn_actualizaUser"
+        app:layout_constraintTop_toBottomOf="@+id/btn_actualizaUser" />
+
+    <EditText
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_id"
+        app:layout_constraintStart_toStartOf="@+id/txt_id"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id" />
+
+    <EditText
+        android:id="@+id/txt_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombre"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+    <Button
+        android:id="@+id/btn_consultarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONSULTAA"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crearUser"
+        app:layout_constraintStart_toStartOf="@+id/btn_crearUser"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearUser" />
+
+    <Button
+        android:id="@+id/btn_actualizaUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR"
+        app:layout_constraintEnd_toEndOf="@+id/btn_eliminarUser"
+        app:layout_constraintStart_toStartOf="@+id/btn_eliminarUser"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminarUser" />
+
+    <Button
+        android:id="@+id/btn_eliminarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="ELIMINAR"
+        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="@+id/txt_descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
+
+    <EditText
+        android:id="@+id/txt_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/txt_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="ID"
+        app:layout_constraintBottom_toTopOf="@+id/txt_nombre"
+        app:layout_constraintEnd_toStartOf="@+id/txt_id"
+        app:layout_constraintTop_toTopOf="@+id/txt_id"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/txt_view_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_nombre"
+        app:layout_constraintEnd_toStartOf="@+id/txt_nombre"
+        app:layout_constraintTop_toTopOf="@+id/txt_nombre"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/txt_view_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Descripción"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_descripcion"
+        app:layout_constraintEnd_toStartOf="@+id/txt_descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre"
+        app:layout_constraintVertical_bias="0.461" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

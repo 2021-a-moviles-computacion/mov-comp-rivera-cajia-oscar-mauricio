@@ -12,11 +12,11 @@ class BBaseDatosMemoria {
         }
         init {
             arregloBEntrenador
-                .add(BEntrenador("Adrian", "a@a.com"))
+                .add(BEntrenador("Adrian", "a@a.com", null))
             arregloBEntrenador
-                .add(BEntrenador("Vicente", "v@v.com"))
+                .add(BEntrenador("Vicente", "v@v.com", null))
             arregloBEntrenador
-                .add(BEntrenador("Pepe", "p@p.com"))
+                .add(BEntrenador("Pepe", "p@p.com", null))
         }
     }
 }

@@ -35,7 +35,7 @@ class CIntentExplicitoParametros : AppCompatActivity() {
                 intentDeolverParametros.putExtra("edadModificado", 24)
                 intentDeolverParametros.putExtra(
                     "entrenadorModificado",
-                    BEntrenador("OScar", "Rivera")
+                    BEntrenador("OScar", "Rivera", null)
                 )
                 setResult(
                     RESULT_OK,
