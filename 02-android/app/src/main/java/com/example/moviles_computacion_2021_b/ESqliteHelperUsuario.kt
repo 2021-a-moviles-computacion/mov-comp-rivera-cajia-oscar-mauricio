@@ -6,13 +6,11 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 
-class ESqliteHelperUsuario(
-    context: Context?,
-) : SQLiteOpenHelper(
-    context,
-    "nameMoviles",
-    null,
-    1)
+class ESqliteHelperUsuario(context: Context?,) :
+    SQLiteOpenHelper(      context,
+                    "nameMoviles",
+                    null,
+                    1)
 {
     override fun onCreate(db: SQLiteDatabase?) {
         //script para crear tabla user
@@ -108,6 +106,7 @@ class ESqliteHelperUsuario(
         val valoresActualizar = ContentValues()
         valoresActualizar.put("nombre", nombre)
         valoresActualizar.put("descripcion", descripcion)
+
         val resultadoActualizacion = conexionEscritura
             .update(
                 "USUARIO",

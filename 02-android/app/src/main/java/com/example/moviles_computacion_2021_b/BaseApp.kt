@@ -2,6 +2,7 @@ package com.example.moviles_computacion_2021_b
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -31,6 +32,12 @@ class BaseApp : AppCompatActivity() {
 
         val botonEliminarUser = findViewById<Button>(R.id.btn_eliminarUser)
         botonEliminarUser.setOnClickListener { eliminar(txtId.text.toString().toInt()) }
+
+        val adaptador = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            arregloNumeros
+        )
     }
 
         fun consultar(id: Int) {

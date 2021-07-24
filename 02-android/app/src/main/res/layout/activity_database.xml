@@ -38,8 +38,10 @@
         android:id="@+id/btn_consultarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="CONSULTAA"
         app:layout_constraintEnd_toEndOf="@+id/btn_crearUser"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_crearUser"
         app:layout_constraintTop_toBottomOf="@+id/btn_crearUser" />
 
@@ -56,12 +58,11 @@
         android:id="@+id/btn_eliminarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="24dp"
         android:text="ELIMINAR"
-        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="@+id/txt_descripcion"
-        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
+        app:layout_constraintEnd_toEndOf="@+id/ltv_database"
+        app:layout_constraintStart_toStartOf="@+id/ltv_database"
+        app:layout_constraintTop_toBottomOf="@+id/ltv_database" />
 
     <EditText
         android:id="@+id/txt_id"
@@ -71,10 +72,10 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <TextView
         android:id="@+id/txt_view_id"
@@ -108,5 +109,15 @@
         app:layout_constraintEnd_toStartOf="@+id/txt_descripcion"
         app:layout_constraintTop_toBottomOf="@+id/txt_nombre"
         app:layout_constraintVertical_bias="0.461" />
+
+    <ListView
+        android:id="@+id/ltv_database"
+        android:layout_width="272dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

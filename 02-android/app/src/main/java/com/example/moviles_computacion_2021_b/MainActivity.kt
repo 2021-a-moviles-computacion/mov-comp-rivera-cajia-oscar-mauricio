@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        EBaseDeDatos.TablaUsuario = ESqliteHelperUsuario(this)
 
         if (EBaseDeDatos.TablaUsuario != null) {
             //EBaseDeDatos.TablaUsuario.consultarUsuarioPorId()
