@@ -47,6 +47,38 @@ class ESqliteHelperUsuario(context: Context?,) :
         return if (resultadoEscritura.toInt() == -1) false else true// ==1 no se creo
     }
 
+    fun consultarUsuarios(): ArrayList<EUsuarioBDD> {
+
+        val scriptConsultarUsuario = "SELECT * FROM USUARIO"
+//        val baseDatosLectura = this.readableDatabase
+        val baseDatosLectura = readableDatabase
+
+        val resultaConsultaLectura = baseDatosLectura.rawQuery(
+            scriptConsultarUsuario,
+            null
+        )
+
+        //vemos si existe el user
+        val existeUsuario = resultaConsultaLectura.moveToFirst()
+        val arregloUsuario = arrayListOf<EUsuarioBDD>()//para obtener varios registros
+
+
+        //leemos las cosas del user
+        if (existeUsuario) {
+            do {
+                val id = resultaConsultaLectura.getInt(0) // Columna indice 0 -> ID
+                val usuarioEncontrado = EUsuarioBDD(id, resultaConsultaLectura.getString(1), resultaConsultaLectura.getString(2))
+                if(id!=null){
+                    arregloUsuario.add(usuarioEncontrado)
+                }
+            } while (resultaConsultaLectura.moveToNext())
+        }
+        resultaConsultaLectura.close()
+        baseDatosLectura.close()
+        return arregloUsuario
+    }
+
+
     fun consultarUsuarioPorId(id: Int): EUsuarioBDD {
 
         val scriptConsultarUsuario = "SELECT * FROM USUARIO WHERE ID = ${id}"

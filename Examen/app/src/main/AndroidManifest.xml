@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Examen1B">
-        <activity android:name=".AFabricantes"></activity>
+        <activity android:name=".AEditarModelo"></activity>
+        <activity android:name=".ACrearModelo" />
+        <activity android:name=".AEditarFabricante" />
+        <activity android:name=".ACrearFabricante" />
+        <activity android:name=".AFabricantes" />
         <activity android:name=".AModelos" />
         <activity android:name=".MainActivity">
             <intent-filter>

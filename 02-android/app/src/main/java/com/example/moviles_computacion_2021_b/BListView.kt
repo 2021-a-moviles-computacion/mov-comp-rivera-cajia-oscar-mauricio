@@ -54,8 +54,10 @@ class BListView : AppCompatActivity() {
         }
 
         //aber los elementos del listview
-        listViewEjemplo
-            .setOnItemLongClickListener { adapterView, view, posicion, id ->
+        /*listViewEjemplo.setOnItemLongClickListener {
+
+                adapterView, view, posicion, id ->
+
                 Log.i("list-view", "Has dado click en ${posicion}")
 
                 val builder = AlertDialog.Builder(this) //constructor de alerta
@@ -95,9 +97,10 @@ class BListView : AppCompatActivity() {
                 dialogo.show()
 
                 return@setOnItemLongClickListener true
-            }
-        //registerForContextMenu(listViewEjemplo)
+            }*/
+        registerForContextMenu(listViewEjemplo)
     }
+
 
 
 
@@ -131,6 +134,7 @@ class BListView : AppCompatActivity() {
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
+
         return when(item?.itemId){
             // Editar
             R.id.mi_editar -> {

@@ -5,7 +5,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
 class BaseApp : AppCompatActivity() {
@@ -15,7 +15,42 @@ class BaseApp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_database)
 
+
         EBaseDeDatos.TablaUsuario = ESqliteHelperUsuario(this)
+        var adaptador: ArrayAdapter<EUsuarioBDD>? = null
+        val todosFab = EBaseDeDatos.TablaUsuario!!.consultarUsuarios()
+        adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, todosFab)
+        //val listViewDBB = findViewById<ListView>(R.id.ltv_database)
+        //listViewDBB.adapter = adaptador
+        //setOf(listViewDBB.adapter)
+
+
+        val helper = ESqliteHelperUsuario(this)
+        val arrayList: ArrayList<String> = helper.consultarUsuarios() as ArrayList<String>
+
+        val listView: ListView = findViewById(R.id.ltv_database)
+        val arrayAdapter: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_list_item_1, arrayList as List<Any?>)
+        listView.adapter = arrayAdapter
+        /*save.setOnClickListener {
+            arrayList.clear()
+            arrayList.addAll(helper.getAllContacts())
+            arrayAdapter.notifyDataSetChanged()
+            listView.invalidateViews()
+            listView.refreshDrawableState()
+        }
+        refresh.setOnClickListener {
+            if (name.text.toString().isNotEmpty() && salary.text.toString().isNotEmpty()) {
+                if (helper.addData(name.text.toString(), salary.text.toString())) {
+                    Toast.makeText(this, "Inserted", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "NOT Inserted", Toast.LENGTH_LONG).show()
+                }
+            } else {
+                name.error = "Enter NAME"
+                salary.error = "Enter Salary"
+            }*/
+
+
 
         val txtNombre = findViewById<EditText>(R.id.txt_nombre)
         val txtDescripcion = findViewById<EditText>(R.id.txt_descripcion)
@@ -33,12 +68,14 @@ class BaseApp : AppCompatActivity() {
         val botonEliminarUser = findViewById<Button>(R.id.btn_eliminarUser)
         botonEliminarUser.setOnClickListener { eliminar(txtId.text.toString().toInt()) }
 
-        val adaptador = ArrayAdapter(
-            this,
-            android.R.layout.simple_list_item_1,
-            arregloNumeros
-        )
+
+
+
     }
+
+
+
+
 
         fun consultar(id: Int) {
             if (EBaseDeDatos.TablaUsuario != null) {

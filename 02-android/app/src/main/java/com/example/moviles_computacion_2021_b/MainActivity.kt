@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         //    "entrenador",
         //    BEntrenador("Ofcar", "Rifera")
         //)
-        //startActivity(intentExplicito)
+        startActivity(intentExplicito)
         startActivityForResult(intentExplicito, CODIGO_RESPUESTA_INTENT_EXPLICITO)
         /*
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
