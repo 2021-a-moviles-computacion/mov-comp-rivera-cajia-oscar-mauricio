@@ -13,4 +13,29 @@ class EUsuarioBDD(
         parcel.readString(),
         parcel.readString()
     )
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(id)
+        parcel.writeString(nombre)
+        parcel.writeString(descripcion)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    override fun toString(): String {
+        return "${nombre} - ${descripcion}"
+    }
+
+
+    companion object CREATOR : Parcelable.Creator<EUsuarioBDD> {
+        override fun createFromParcel(parcel: Parcel): EUsuarioBDD {
+            return EUsuarioBDD(parcel)
+        }
+
+        override fun newArray(size: Int): Array<EUsuarioBDD?> {
+            return arrayOfNulls(size)
+        }
+    }
 }

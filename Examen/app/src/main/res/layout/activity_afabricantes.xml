@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fabricantes"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -19,7 +20,7 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <Button
-        android:id="@+id/btn_crear_fabricante"
+        android:id="@+id/btn_abrir_crear_fabricante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -30,11 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ListView
+        android:id="@+id/ltv_modelos"
         android:layout_width="284dp"
         android:layout_height="312dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_crear_fabricante"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_abrir_crear_fabricante"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_crear_fabricante"
-        app:layout_constraintTop_toBottomOf="@+id/btn_crear_fabricante" />
+        app:layout_constraintStart_toStartOf="@+id/btn_abrir_crear_fabricante"
+        app:layout_constraintTop_toBottomOf="@+id/btn_abrir_crear_fabricante" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

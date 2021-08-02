@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ACrearModelo">
+
+
+    <TextView
+        android:id="@+id/txt_view_puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Puntuación"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_puntExpModelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_puntExpModelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_puntExpModelo"
+        app:layout_constraintVertical_bias="0.653" />
+
+        <EditText
+            android:id="@+id/txt_nPuertas_Modelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/txt_precio_modelo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_precio_modelo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_precio_modelo" />
+
+    <TextView
+        android:id="@+id/txt_view_serie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Serie"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_serie_Modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_serie_Modelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_serie_Modelo"
+        app:layout_constraintVertical_bias="0.461" />
+
+        <EditText
+            android:id="@+id/txt_puntExpModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/txt_nPuertas_Modelo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_nPuertas_Modelo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nPuertas_Modelo" />
+
+    <TextView
+        android:id="@+id/txt_view_nPuertas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Núm. puertas"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_nPuertas_Modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_nPuertas_Modelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_nPuertas_Modelo" />
+
+        <EditText
+            android:id="@+id/txt_serie_Modelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/txt_puntExpModelo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_puntExpModelo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_puntExpModelo" />
+
+    <TextView
+        android:id="@+id/txt_view_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_precio_modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_precio_modelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_precio_modelo"
+        app:layout_constraintVertical_bias="0.538" />
+
+        <EditText
+            android:id="@+id/txt_precio_modelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/txt_nombre_modelo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_nombre_modelo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nombre_modelo" />
+
+    <EditText
+        android:id="@+id/txt_nombre_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+            android:id="@+id/txt_view_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Nombre"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_modelo"
+            app:layout_constraintEnd_toStartOf="@+id/txt_nombre_modelo"
+            app:layout_constraintTop_toTopOf="@+id/txt_nombre_modelo"
+            app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREAR MODELO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <Button
+            android:id="@+id/btn_crear_modelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Crear "
+            app:layout_constraintEnd_toEndOf="@+id/txt_serie_Modelo"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@+id/txt_serie_Modelo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_serie_Modelo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
