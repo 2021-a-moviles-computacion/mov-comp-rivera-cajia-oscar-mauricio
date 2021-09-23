@@ -10,27 +10,31 @@ import androidx.appcompat.app.AppCompatActivity
 
 class BaseApp : AppCompatActivity() {
 
-
+    //var adaptador: ArrayAdapter<*>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_database)
 
 
         EBaseDeDatos.TablaUsuario = ESqliteHelperUsuario(this)
-        var adaptador: ArrayAdapter<EUsuarioBDD>? = null
+        //var adaptador: ArrayAdapter<EUsuarioBDD>? = null
         val todosFab = EBaseDeDatos.TablaUsuario!!.consultarUsuarios()
-        adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, todosFab)
+        //adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, todosFab)
+
+
+
         //val listViewDBB = findViewById<ListView>(R.id.ltv_database)
         //listViewDBB.adapter = adaptador
         //setOf(listViewDBB.adapter)
+        //adaptador.notifyDataSetChanged()//actualizalo
 
 
         val helper = ESqliteHelperUsuario(this)
         val arrayList: ArrayList<String> = helper.consultarUsuarios() as ArrayList<String>
 
-        val listView: ListView = findViewById(R.id.ltv_database)
+        //val listView: ListView = findViewById(R.id.ltv_database)
         val arrayAdapter: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_list_item_1, arrayList as List<Any?>)
-        listView.adapter = arrayAdapter
+        //listView.adapter = arrayAdapter
         /*save.setOnClickListener {
             arrayList.clear()
             arrayList.addAll(helper.getAllContacts())
@@ -66,7 +70,8 @@ class BaseApp : AppCompatActivity() {
         botonActualizarUser.setOnClickListener { actualizar(txtNombre.getText().toString(), txtDescripcion.getText().toString(), txtId.text.toString().toInt()) }
 
         val botonEliminarUser = findViewById<Button>(R.id.btn_eliminarUser)
-        botonEliminarUser.setOnClickListener { eliminar(txtId.text.toString().toInt()) }
+        botonEliminarUser.setOnClickListener { eliminar(txtId.text.toString().toInt())
+        }
 
 
 
@@ -125,6 +130,8 @@ class BaseApp : AppCompatActivity() {
                     Log.i("database","F")
                 }
             }
+
+            //adaptador!!.notifyDataSetChanged()
         }
 
 

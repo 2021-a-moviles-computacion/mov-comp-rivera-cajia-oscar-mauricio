@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "695477033645",
+    "project_id": "mov-com-2021-a-rivera-oscar",
+    "storage_bucket": "mov-com-2021-a-rivera-oscar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695477033645:android:177a54140a3b722752c424",
+        "android_client_info": {
+          "package_name": "com.example.firebasedos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695477033645-rabth21mfkkmoe371ue8lbfqguk4iugm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6BQ7rjcWBYTZHVqxSkbZ5aiMdoPi8ANg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695477033645-rabth21mfkkmoe371ue8lbfqguk4iugm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695477033645:android:c24f98e09470228552c424",
+        "android_client_info": {
+          "package_name": "com.example.firebaseuno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695477033645-rabth21mfkkmoe371ue8lbfqguk4iugm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6BQ7rjcWBYTZHVqxSkbZ5aiMdoPi8ANg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695477033645-rabth21mfkkmoe371ue8lbfqguk4iugm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

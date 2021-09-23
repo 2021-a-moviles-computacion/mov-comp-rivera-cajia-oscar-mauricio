@@ -30,7 +30,6 @@ class FRecyclerViewAdaptadorNombreCedula(
             cedulaTextView = view.findViewById(R.id.tv_cedula)
             likesTextView = view.findViewById(R.id.tv_likes)
             accionButton = view.findViewById(R.id.btn_dar_like)
-
             accionButton.setOnClickListener{
                 this.anadirLike()
             }
@@ -57,6 +56,7 @@ class FRecyclerViewAdaptadorNombreCedula(
         return MyViewHolder(itemView)
     }
 
+    //para mostrar. Para las storys, para los comentarios
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         //ve iterando y devuelve la info correspodiente
         val entrenador = listaEntrenador[position]

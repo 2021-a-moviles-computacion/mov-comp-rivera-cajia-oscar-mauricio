@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class EUsuarioBDD(
-    var id: Int,
+    var id: Int?,
     var nombre: String?,
     var descripcion: String?,
 ) : Parcelable {
@@ -15,7 +15,8 @@ class EUsuarioBDD(
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(id)
+        //parcel.writeInt(id)
+        id?.let { parcel?.writeInt(it) }
         parcel.writeString(nombre)
         parcel.writeString(descripcion)
     }
@@ -25,7 +26,7 @@ class EUsuarioBDD(
     }
 
     override fun toString(): String {
-        return "${nombre} - ${descripcion}"
+        return "${id} - ${nombre} - ${descripcion}"
     }
 
 

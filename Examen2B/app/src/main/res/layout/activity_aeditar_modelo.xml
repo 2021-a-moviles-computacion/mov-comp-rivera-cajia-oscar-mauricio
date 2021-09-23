@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AEditarModelo">
+
+    <Button
+        android:id="@+id/btn_actualizar_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Editar"
+        app:layout_constraintEnd_toEndOf="@+id/txt_NLongitud"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/txt_NLongitud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NLongitud" />
+
+    <TextView
+        android:id="@+id/txt_view_fecha3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Puntuación"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_NpuntExpModelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_NpuntExpModelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NnPuertas_Modelo"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <EditText
+        android:id="@+id/txt_NnPuertas_Modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Nprecio_modelo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_view_tipo3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Nprecio_modelo" />
+
+    <TextView
+        android:id="@+id/txt_view_fundador3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Serie"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_Nserie_Modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Nserie_Modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NpuntExpModelo"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/txt_view_fundador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Longitud"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_NLongitud"
+        app:layout_constraintEnd_toStartOf="@+id/txt_NLongitud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NLatitud"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/txt_view_fundador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Latitud"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_NLatitud"
+        app:layout_constraintEnd_toStartOf="@+id/txt_NLatitud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Nserie_Modelo"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <EditText
+        android:id="@+id/txt_NpuntExpModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_NnPuertas_Modelo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_NnPuertas_Modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NnPuertas_Modelo" />
+
+    <TextView
+        android:id="@+id/txt_view_sede3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Núm. Puertas"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_NnPuertas_Modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_NnPuertas_Modelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_NnPuertas_Modelo" />
+
+    <EditText
+        android:id="@+id/txt_Nserie_Modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_NpuntExpModelo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_view_fecha3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NpuntExpModelo" />
+
+    <EditText
+        android:id="@+id/txt_NLatitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Nserie_Modelo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_Nserie_Modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Nserie_Modelo" />
+
+    <EditText
+        android:id="@+id/txt_NLongitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_NLatitud"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_NLatitud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NLatitud" />
+
+    <TextView
+        android:id="@+id/txt_view_tipo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_Nprecio_modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Nprecio_modelo"
+        app:layout_constraintTop_toTopOf="@+id/txt_Nprecio_modelo"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <EditText
+        android:id="@+id/txt_Nprecio_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Nnombre_modelo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_Nnombre_modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Nnombre_modelo" />
+
+    <EditText
+        android:id="@+id/txt_Nnombre_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_view_editar_fabricante"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="@+id/txt_view_editar_fabricante"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_editar_fabricante" />
+
+    <TextView
+        android:id="@+id/txt_view_nombre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_Nnombre_modelo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Nnombre_modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_editar_fabricante"
+        app:layout_constraintVertical_bias="0.848" />
+
+    <TextView
+        android:id="@+id/txt_view_editar_fabricante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDITAR MODELO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

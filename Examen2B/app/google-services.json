@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "27209130825",
+    "project_id": "mov-examen2-rivera-oscar",
+    "storage_bucket": "mov-examen2-rivera-oscar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27209130825:android:55ae39eb04589ee67c7098",
+        "android_client_info": {
+          "package_name": "com.example.miexamen2b"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27209130825-7hfqidg3ld6cc4glcvfajqeio0dupuop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFzo2by-fVxrNWjnu9PiYTHz2P09QeVvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27209130825-7hfqidg3ld6cc4glcvfajqeio0dupuop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

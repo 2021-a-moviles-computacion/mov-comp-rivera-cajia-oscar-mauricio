@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DRestaurante">
+
+    <Button
+        android:id="@+id/btn_crear_restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear restaurante"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262" />
+
+    <EditText
+        android:id="@+id/et_nombre_restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Ingrese nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_crear_restaurante"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crear_restaurante"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear_restaurante" />
+
+    <Button
+        android:id="@+id/btn_datos_prueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Datos prueba"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crear_restaurante"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear_restaurante"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crear_restaurante" />
+
+    <Button
+        android:id="@+id/btn_consultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Consultar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_datos_prueba"
+        app:layout_constraintStart_toStartOf="@+id/btn_datos_prueba"
+        app:layout_constraintTop_toBottomOf="@+id/btn_datos_prueba" />
+</androidx.constraintlayout.widget.ConstraintLayout>
