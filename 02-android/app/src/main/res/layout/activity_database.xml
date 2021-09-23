@@ -58,11 +58,12 @@
         android:id="@+id/btn_eliminarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="68dp"
         android:text="ELIMINAR"
-        app:layout_constraintEnd_toEndOf="@+id/ltv_database"
-        app:layout_constraintStart_toStartOf="@+id/ltv_database"
-        app:layout_constraintTop_toBottomOf="@+id/ltv_database" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintStart_toStartOf="@+id/txt_descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
 
     <EditText
         android:id="@+id/txt_id"
@@ -109,15 +110,5 @@
         app:layout_constraintEnd_toStartOf="@+id/txt_descripcion"
         app:layout_constraintTop_toBottomOf="@+id/txt_nombre"
         app:layout_constraintVertical_bias="0.461" />
-
-    <ListView
-        android:id="@+id/ltv_database"
-        android:layout_width="272dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_descripcion"
-        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
