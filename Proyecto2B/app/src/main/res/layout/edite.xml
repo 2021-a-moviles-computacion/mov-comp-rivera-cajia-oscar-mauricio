@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#4E5052"
+    android:layout_height="match_parent">
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/progressbar"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-184dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="-176dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="cursive"
+        android:text="Mis datos"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/app_name_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_name"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/full_name"
+            android:nextFocusDown="@id/edit_text_email"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHint"
+             />
+
+
+        <EditText
+            android:id="@+id/edit_text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/phone"
+            android:inputType="number"
+            android:maxLength="10"
+            android:nextFocusDown="@id/spinner"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHint" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawSelectorOnTop="true"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="@dimen/drawable_padding"
+
+            android:hint="@string/gender"
+            android:nextFocusDown="@id/button_register"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/edit_text_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_home2"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/ciudad"
+            android:nextFocusDown="@id/edit_text_password"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHint" />
+
+        <Button
+            android:id="@+id/button_editar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_register"
+            android:text="EDITAR MIS DATOS"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

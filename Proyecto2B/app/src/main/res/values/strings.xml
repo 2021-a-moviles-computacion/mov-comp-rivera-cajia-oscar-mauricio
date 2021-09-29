@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Proyecto 2B</string>
+    <string name="full_name">Nombre y apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="password">Contraseña</string>
+    <string name="gender">Género</string>
+    <string name="phone">Teléfono</string>
+    <string name="input_error_gender">Seleccione su género</string>
+    <string name="register">Crear cuenta</string>
+    <string name="input_error_name">name required</string>
+    <string name="input_error_city">Ciudad requerida</string>
+    <string name="input_error_email">email required</string>
+    <string name="input_error_password">password required</string>
+    <string name="input_error_phone">phone required</string>
+    <string name="input_error_password_length">password should be atleast 6 characters long</string>
+    <string name="input_error_phone_invalid">enter a valid phone number</string>
+    <string name="registration_success">Registered Successfully</string>
+    <string name="input_error_email_invalid">enter a valid email</string>
+    <string-array name="array_gender">
+        <item>Seleccione su género</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+</resources>

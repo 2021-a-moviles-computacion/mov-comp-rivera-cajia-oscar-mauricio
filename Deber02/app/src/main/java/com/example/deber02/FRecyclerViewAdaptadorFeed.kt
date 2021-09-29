@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+
 class FRecyclerViewAdaptadorFeed(private val contexto: GRecyclerViewFeed,
                                  private val listaHome: List<BFeedHome>,
                                  private val recyclerView: RecyclerView
@@ -54,6 +55,7 @@ class FRecyclerViewAdaptadorFeed(private val contexto: GRecyclerViewFeed,
 
 
         }
+
         fun anadirLike(){
 
             if (click == false) {
